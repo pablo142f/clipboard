@@ -48,8 +48,8 @@ ___
 
 |          Name     | Required |  Type   | Description                                                |
 | -----------------:|:--------:|:-------:| ---------------------------------------------------------- |
-| `product`         | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
-| `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information. 
+| `name`            | required | string  | User's name                                                |
+| `email`           | required | string  | User's email                                               |
 
 **Response**
 
