@@ -25,10 +25,10 @@ This will run our docker with 2 microservices applications (gateway and clipboar
 
 ___
 
-## Gateway endpoints usage
+## Gateway services usage
 
 ### Hello gateway *http://localhost:4000/*
-Test your gateway is running properly.
+Test your gateway services are running properly.
 
 **No Parameters**
 
@@ -125,4 +125,64 @@ The next microservice is protected by authentication, use the Bearer token creat
 
 ![My Image](./images/2.png)
 
+___
+
+## Clipboard services usage
+
+### Hello clipboard *http://localhost:4000/clipboard*
+Test your clipboard services are running properly.
+
+**No Parameters**
+
+**Response**
+
+```
+{
+    "msg": "Hello from Clipboard Services"
+}
+
+```
+___
+
+### Get all employees *http://localhost:4000/clipboard/employee/getAll*
+Added this service as a plus just to be able to fetch all the dataset
+
+**No Parameters**
+
+**Response**
+
+```
+[
+    {
+        "id": 10,
+        "name": "Abhishek",
+        "salary": 145000,
+        "currency": "USD",
+        "department": "Engineering",
+        "oncontract": null,
+        "sub_department": "Platform",
+        "createdAt": "2022-11-02T06:01:59.217Z",
+        "updatedAt": "2022-11-02T06:01:59.217Z"
+    },
+    {
+        "id": 12,
+        "name": "Anurag",
+        "salary": 90000,
+        "currency": "USD",
+        "department": "Banking",
+        "oncontract": true,
+        "sub_department": "Loan",
+        "createdAt": "2022-11-02T06:02:53.438Z",
+        "updatedAt": "2022-11-02T06:02:53.438Z"
+    },
+
+...ETC
+]
+
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 500* > Bad request
 ___
