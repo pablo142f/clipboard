@@ -27,7 +27,7 @@ ___
 
 ## Gateway endpoints usage
 
-### Hello gateway
+### Hello gateway *http://localhost:4000/*
 Test your gateway is running properly.
 
 **No Parameters**
@@ -42,7 +42,7 @@ Test your gateway is running properly.
 ```
 ___
 
-### Registration
+### Registration *http://localhost:4000/authentication/registration*
 
 **Parameters**
 
@@ -62,13 +62,51 @@ ___
     "password" : "test123",
     "phone": "8182740581"
 }
+
 ```
 
 **Response**
 
 ```
 {
-    "msg": "Hello from Gateway"
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzUxOTAzOX0.AcZaoYaeR6iz4qVsiRmyzixeCfErWFYHzqbV5U0gJJk",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzYwNTQzOX0.QyTo10Zogq4E4W_Z66SCVTDeay-hVebO6NrmzPeK8lQ"
+}
+
+```
+
+**Error Response**
+
+*Status 200* > Success
+*Status 400* > Account already exists
+*Status 500* > Bad request
+___
+
+### Login *http://localhost:4000/authentication/login*
+
+**Parameters**
+
+|          Name     | Required |  Type   | Description                                                |
+| -----------------:|:--------:|:-------:| ---------------------------------------------------------- |
+| `email`           | required | string  | User's email                                               |
+| `password`        | required | string  | User's password                                            |
+
+**Parameters example**
+
+```
+{
+    "email" : "pablo.barrera@clipboard",
+    "password" : "test123"
+}
+
+```
+
+**Response**
+
+```
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzUxOTAzOX0.AcZaoYaeR6iz4qVsiRmyzixeCfErWFYHzqbV5U0gJJk",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzYwNTQzOX0.QyTo10Zogq4E4W_Z66SCVTDeay-hVebO6NrmzPeK8lQ"
 }
 
 ```
