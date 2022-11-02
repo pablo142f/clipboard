@@ -110,4 +110,9 @@ ___
 }
 
 ```
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 400* > Account not found <br/>
+*Status 500* > Bad request
 ___
