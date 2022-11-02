@@ -116,3 +116,11 @@ ___
 *Status 400* > Account not found <br/>
 *Status 500* > Bad request
 ___
+
+## Authentication
+
+The next microservice is protected by authentication, use the Bearer token created in registration or login to be able to call the next services.
+
+![My Image](./images/2.png)
+
+___
