@@ -77,8 +77,8 @@ ___
 
 **Error Response**
 
-*Status 200* > Success
-*Status 400* > Account already exists
+*Status 200* > Success <br/>
+*Status 400* > Account already exists <br/>
 *Status 500* > Bad request
 ___
 
