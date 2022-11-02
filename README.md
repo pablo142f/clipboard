@@ -18,6 +18,44 @@ Just one simple command to run our docker.
 docker-compose up --build
 ```
 
-This will run our docker with 2 microservices applications (gateway and clipboard) and 2 databases one for each set of our microservices as well.
+This will run our docker with 2 microservices applications (gateway and clipboard) and 2 databases one for each set of our microservices as well. The containers should look like this:
+(No need to enter the microservices projects to install dependencies since docker will do it for you)
 
 ![My Image](./images/1.png)
+
+## Gateway endpoints usage
+
+### Hello gateway
+Test your gateway is running properly.
+
+**No Parameters**
+
+**Response**
+
+```
+{
+    "msg": "Hello from Gateway"
+}
+
+```
+___
+
+### Registration
+
+**Parameters**
+
+|          Name | Required |  Type   | 
+Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `product` | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
+|     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information. 
+
+**Response**
+
+```
+{
+    "msg": "Hello from Gateway"
+}
+
+```
+___
