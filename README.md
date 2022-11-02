@@ -121,6 +121,8 @@ ___
 
 The next microservice is protected by authentication, use the Bearer token created in registration or login to be able to call the next services.
 
+*Example of an incorrect token or if the token is not supplied:*
+
 ![My Image](./images/2.png)
 
 ___
