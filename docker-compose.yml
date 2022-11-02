@@ -1,0 +1,66 @@
+version: '3.8'
+services:
+  gateway_db:
+    container_name: gateway_db
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=clipboard_gateway
+      - POSTGRES_PASSWORD=clipboardgateway2022!
+      - POSTGRES_DB=gateway_db
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+    networks:
+      - my-network
+
+  clipboard_db:
+    container_name: clipboard_db
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=clipboard_db
+      - POSTGRES_PASSWORD=clipboarddb2022!
+      - POSTGRES_DB=clipboard_db
+    ports:
+      - '5433:5433'
+    volumes: 
+      - db:/var/lib/postgresql/data2
+    networks:
+      - my-network
+
+  clipboard_gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    depends_on:
+      - gateway_db
+    container_name: clipboard_gateway
+    env_file: ./gateway/.env
+    ports:
+      - "4000:4000"
+    networks:
+      - my-network
+
+  clipboard_services:
+    build:
+      context: ./clipboard
+      dockerfile: Dockerfile
+    depends_on:
+      - clipboard_db
+    container_name: clipboard_services
+    env_file: ./clipboard/.env
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  my-network:
+    name: clipboard-services
+    driver: bridge
