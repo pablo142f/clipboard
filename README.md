@@ -121,7 +121,7 @@ ___
 
 The next microservice is protected by authentication, 
 
-# Use the Bearer token created in registration or login to be able to call the next services
+## Use the Bearer token created in registration or login to be able to call the next services
 
 *Example of an incorrect token or if the token is not supplied:*
 
