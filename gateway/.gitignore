@@ -1,4 +1,2 @@
 node_modules/
 .dockerignore
-.env
-.env.development
