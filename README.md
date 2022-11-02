@@ -50,6 +50,19 @@ ___
 | -----------------:|:--------:|:-------:| ---------------------------------------------------------- |
 | `name`            | required | string  | User's name                                                |
 | `email`           | required | string  | User's email                                               |
+| `password`        | required | string  | User's password                                            |
+| `phone`           | required | string  | User's phone                                               |
+
+**Parameters example**
+
+```
+{
+    "name" : "Pablo Barrera",
+    "email" : "Pablo.barrera@clipboard",
+    "password" : "test123",
+    "phone": "8182740581"
+}
+```
 
 **Response**
 
