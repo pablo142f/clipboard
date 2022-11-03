@@ -38,7 +38,6 @@ Test your gateway services are running properly.
 {
     "msg": "Hello from Gateway"
 }
-
 ```
 ___
 
@@ -62,7 +61,6 @@ ___
     "password" : "test123",
     "phone": "8182740581"
 }
-
 ```
 
 **Response**
@@ -72,7 +70,6 @@ ___
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzUxOTAzOX0.AcZaoYaeR6iz4qVsiRmyzixeCfErWFYHzqbV5U0gJJk",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzYwNTQzOX0.QyTo10Zogq4E4W_Z66SCVTDeay-hVebO6NrmzPeK8lQ"
 }
-
 ```
 
 **Error Response**
@@ -98,7 +95,6 @@ ___
     "email" : "pablo.barrera@clipboard",
     "password" : "test123"
 }
-
 ```
 
 **Response**
@@ -108,7 +104,6 @@ ___
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzUxOTAzOX0.AcZaoYaeR6iz4qVsiRmyzixeCfErWFYHzqbV5U0gJJk",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2Njc0MzI2MzksImV4cCI6MTY2NzYwNTQzOX0.QyTo10Zogq4E4W_Z66SCVTDeay-hVebO6NrmzPeK8lQ"
 }
-
 ```
 **Error Response**
 
@@ -142,7 +137,6 @@ Test your clipboard services are running properly.
 {
     "msg": "Hello from Clipboard Services"
 }
-
 ```
 ___
 
@@ -180,7 +174,6 @@ Added this service as a plus just to be able to fetch all the dataset
 
 ...ETC
 ]
-
 ```
 
 **Error Response**
