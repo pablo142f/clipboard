@@ -170,9 +170,8 @@ Added this service as a plus just to be able to fetch all the dataset
         "sub_department": "Loan",
         "createdAt": "2022-11-02T06:02:53.438Z",
         "updatedAt": "2022-11-02T06:02:53.438Z"
-    },
-
-...ETC
+    }
+...
 ]
 ```
 
