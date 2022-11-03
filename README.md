@@ -112,6 +112,7 @@ ___
 *Status 500* > Bad request
 ___
 
+IMPORTANT
 ## Authentication
 
 The next microservice is protected by authentication, 
@@ -140,7 +141,7 @@ Test your clipboard services are running properly.
 ```
 ___
 
-### Get all employees <GET> *http://localhost:4000/clipboard/employee/getAll*
+### Get all employees <GET> *http://localhost:4000/clipboard/employee/*
 Added this service as a plus just to be able to fetch all the dataset
 
 **No Parameters**
@@ -245,6 +246,37 @@ ___
 {
     "msg": "Employee deleted successfully."
 }
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 401* > Employee is required <br/>
+*Status 500* > Bad request
+___
+
+### Get summary statistics <GET> *http://localhost:4000/clipboard/ss*
+
+### Get summary statistics <GET> *http://localhost:4000/clipboard/ss*
+
+**Parameters**
+
+|          Name     | Required |  Type    | Description                                                |
+| -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
+| `id`              | required | number   | Employee's id                                              |
+
+**No parameters**
+
+**Response**
+
+```
+[
+    {
+        "minSalary": 30,
+        "maxSalary": 200000000,
+        "avgSalary": 22295010
+    }
+]
 ```
 
 **Error Response**
