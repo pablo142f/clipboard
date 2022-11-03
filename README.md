@@ -250,6 +250,6 @@ ___
 **Error Response**
 
 *Status 200* > Success <br/>
-*Status 400* > Employee is required <br/>
+*Status 401* > Employee is required <br/>
 *Status 500* > Bad request
 ___

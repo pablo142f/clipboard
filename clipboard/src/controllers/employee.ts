@@ -59,6 +59,10 @@ const createEmployee = async (req: Request, res: Response, next: NextFunction) =
 
 const deleteEmployee = async (req: Request, res: Response, next: NextFunction) => {
     try {
+        if (!req?.body?.id) {
+            res.status(401).send({ msg: "Employee is required" });
+            return;
+        }
         await employeeModel.deleteEmployee(req.body);
         res.status(200).send({ msg: "Employee deleted successfully." });
     } catch (err: any) {
