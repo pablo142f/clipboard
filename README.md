@@ -302,3 +302,46 @@ ___
 
 *I could merge the service of 'Get summary statistics' and 'Get summary statistics on contract' with as 'on_contract' as a parameter but decided to had to different services.*
 
+
+### Get summary statistics by department (and subdepartment as optional) *POST* *http://localhost:4000/clipboard/ss/by_department*
+
+**Parameters**
+
+|          Name     | Required |  Type    | Description                                                |
+| -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
+| `department`      | required | string   | The department in which we want to get the SS              |
+| `sub_department`  | optional | string   | Optional combination of SS by department and subdepartment |
+
+**Parameters example**
+
+```
+{
+    "department": "Engineering",
+}
+
+or
+
+{
+    "department": "Engineering",
+    "sub_department": "Platform"
+}
+```
+
+**Response**
+
+```
+[
+    {
+        "minSalary": 30,
+        "maxSalary": 200000000,
+        "avgSalary": 40099006
+    }
+]
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 401* > You have to select a department <br/>
+*Status 500* > Bad request
+___
