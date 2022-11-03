@@ -127,7 +127,7 @@ ___
 
 ## Clipboard services usage
 
-### Hello clipboard <GET> *http://localhost:4000/clipboard*
+### Hello clipboard *GET* *http://localhost:4000/clipboard*
 Test your clipboard services are running properly.
 
 **No Parameters**
@@ -141,7 +141,7 @@ Test your clipboard services are running properly.
 ```
 ___
 
-### Get all employees <GET> *http://localhost:4000/clipboard/employee/*
+### Get all employees *GET* *http://localhost:4000/clipboard/employee/*
 Added this service as a plus just to be able to fetch all the dataset
 
 **No Parameters**
@@ -182,7 +182,7 @@ Added this service as a plus just to be able to fetch all the dataset
 *Status 500* > Bad request
 ___
 
-### Create employee <POST> *http://localhost:4000/clipboard/employee*
+### Create employee *POST* *http://localhost:4000/clipboard/employee*
 
 **Parameters**
 
@@ -224,7 +224,7 @@ Not sure what kind of response was desired here, displayed a text but its possib
 *Status 500* > Bad request
 ___
 
-### Delete employee <DELETE> *http://localhost:4000/clipboard/employee*
+### Delete employee *DELETE* *http://localhost:4000/clipboard/employee*
 
 **Parameters**
 
@@ -255,7 +255,7 @@ ___
 *Status 500* > Bad request
 ___
 
-### Get summary statistics <GET> *http://localhost:4000/clipboard/ss*
+### Get summary statistics *GET* *http://localhost:4000/clipboard/ss*
 
 **No parameters**
 
@@ -277,7 +277,7 @@ ___
 *Status 500* > Bad request
 ___
 
-### Get summary statistics on contract <GET> *http://localhost:4000/clipboard/ss/oncontract*
+### Get summary statistics on contract *GET* *http://localhost:4000/clipboard/ss/oncontract*
 
 **No Parameters**
 
