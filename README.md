@@ -229,38 +229,27 @@ ___
 
 |          Name     | Required |  Type    | Description                                                |
 | -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
-| `name`            | required | string   | Employee's name                                            |
-| `salary`          | required | float    | Employee's salary                                          |
-| `currency`        | required | string   | Employee's salary currency                                 |
-| `department`      | required | string   | Employee's department                                      |
-| `oncontract`      | optional | boolean  | Employee's is on contract status                           |
-| `sub_department`  | required | string   | Employee's sub department                                  |
+| `id`              | required | number   | Employee's id                                              |
 
 **Parameters example**
 
 ```
 {
-    "name": "Nikhil",
-    "salary": "110000",
-    "currency": "USD",
-    "on_contract": "true",
-    "department": "Engineering",
-    "sub_department": "Platform"
+    "id": 20
 }
 ```
 
 **Response**
-Not sure what kind of response was desired here, displayed a text but its possible to return the id or any data from the employee.
 
 ```
 {
-    "msg": "Employee created successfully."
+    "msg": "Employee deleted successfully."
 }
 ```
 
 **Error Response**
 
 *Status 200* > Success <br/>
-*Status 400* > Field "X" is required <br/>
+*Status 400* > Employee is required <br/>
 *Status 500* > Bad request
 ___
