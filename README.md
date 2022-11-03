@@ -27,7 +27,7 @@ ___
 
 ## Gateway services usage
 
-### Hello gateway *http://localhost:4000/*
+### Hello gateway <GET>*http://localhost:4000/*
 Test your gateway services are running properly.
 
 **No Parameters**
@@ -41,7 +41,7 @@ Test your gateway services are running properly.
 ```
 ___
 
-### Registration *http://localhost:4000/authentication/registration*
+### Registration <POST>*http://localhost:4000/authentication/registration*
 
 **Parameters**
 
@@ -79,7 +79,7 @@ ___
 *Status 500* > Bad request
 ___
 
-### Login *http://localhost:4000/authentication/login*
+### Login <POST>*http://localhost:4000/authentication/login*
 
 **Parameters**
 
@@ -126,7 +126,7 @@ ___
 
 ## Clipboard services usage
 
-### Hello clipboard *http://localhost:4000/clipboard*
+### Hello clipboard <GET>*http://localhost:4000/clipboard*
 Test your clipboard services are running properly.
 
 **No Parameters**
@@ -140,7 +140,7 @@ Test your clipboard services are running properly.
 ```
 ___
 
-### Get all employees *http://localhost:4000/clipboard/employee/getAll*
+### Get all employees <GET>*http://localhost:4000/clipboard/employee/getAll*
 Added this service as a plus just to be able to fetch all the dataset
 
 **No Parameters**
@@ -178,5 +178,47 @@ Added this service as a plus just to be able to fetch all the dataset
 **Error Response**
 
 *Status 200* > Success <br/>
+*Status 500* > Bad request
+___
+
+### Create employee <POST>*http://localhost:4000/clipboard/employee*
+
+**Parameters**
+
+|          Name     | Required |  Type    | Description                                                |
+| -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
+| `name`            | required | string   | Employee's name                                            |
+| `salary`          | required | float    | Employee's email                                           |
+| `currency`        | required | string   | Employee's currency                                        |
+| `department`      | required | string   | Employee's department                                      |
+| `oncontract`      | optional | boolean  | Employee's oncontract                                      |
+| `sub_department`  | required | string   | Employee's sub_department                                  |
+
+**Parameters example**
+
+```
+{
+    "name": "Nikhil",
+    "salary": "110000",
+    "currency": "USD",
+    "on_contract": "true",
+    "department": "Engineering",
+    "sub_department": "Platform"
+}
+```
+
+**Response**
+Not sure what kind of response was desired here, displayed a text but its possible to return the id or any data from the employee.
+
+```
+{
+    "msg": "Employee created successfully."
+}
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 400* > Field "X" is required <br/>
 *Status 500* > Bad request
 ___
