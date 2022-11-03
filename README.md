@@ -224,7 +224,7 @@ Not sure what kind of response was desired here, displayed a text but its possib
 *Status 500* > Bad request
 ___
 
-### Delete employee <DEL> *http://localhost:4000/clipboard/employee*
+### Delete employee <DELETE> *http://localhost:4000/clipboard/employee*
 
 **Parameters**
 
@@ -257,14 +257,6 @@ ___
 
 ### Get summary statistics <GET> *http://localhost:4000/clipboard/ss*
 
-### Get summary statistics <GET> *http://localhost:4000/clipboard/ss*
-
-**Parameters**
-
-|          Name     | Required |  Type    | Description                                                |
-| -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
-| `id`              | required | number   | Employee's id                                              |
-
 **No parameters**
 
 **Response**
@@ -282,6 +274,31 @@ ___
 **Error Response**
 
 *Status 200* > Success <br/>
-*Status 401* > Employee is required <br/>
 *Status 500* > Bad request
 ___
+
+### Get summary statistics on contract <GET> *http://localhost:4000/clipboard/ss/oncontract*
+
+**No Parameters**
+
+**Response**
+
+```
+[
+    {
+        "minSalary": 90000,
+        "maxSalary": 110000,
+        "avgSalary": 100000
+    }
+]
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 500* > Bad request
+___
+
+
+*I could merge the service of 'Get summary statistics' and 'Get summary statistics on contract' with as 'on_contract' as a parameter but decided to had to different services.*
+
