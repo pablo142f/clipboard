@@ -188,11 +188,53 @@ ___
 |          Name     | Required |  Type    | Description                                                |
 | -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
 | `name`            | required | string   | Employee's name                                            |
-| `salary`          | required | float    | Employee's email                                           |
-| `currency`        | required | string   | Employee's currency                                        |
+| `salary`          | required | float    | Employee's salary                                          |
+| `currency`        | required | string   | Employee's salary currency                                 |
 | `department`      | required | string   | Employee's department                                      |
-| `oncontract`      | optional | boolean  | Employee's oncontract                                      |
-| `sub_department`  | required | string   | Employee's sub_department                                  |
+| `oncontract`      | optional | boolean  | Employee's is on contract status                           |
+| `sub_department`  | required | string   | Employee's sub department                                  |
+
+**Parameters example**
+
+```
+{
+    "name": "Nikhil",
+    "salary": "110000",
+    "currency": "USD",
+    "on_contract": "true",
+    "department": "Engineering",
+    "sub_department": "Platform"
+}
+```
+
+**Response**
+Not sure what kind of response was desired here, displayed a text but its possible to return the id or any data from the employee.
+
+```
+{
+    "msg": "Employee created successfully."
+}
+```
+
+**Error Response**
+
+*Status 200* > Success <br/>
+*Status 400* > Field "X" is required <br/>
+*Status 500* > Bad request
+___
+
+### Delete employee <DEL>*http://localhost:4000/clipboard/employee*
+
+**Parameters**
+
+|          Name     | Required |  Type    | Description                                                |
+| -----------------:|:--------:|:--------:| ---------------------------------------------------------- |
+| `name`            | required | string   | Employee's name                                            |
+| `salary`          | required | float    | Employee's salary                                          |
+| `currency`        | required | string   | Employee's salary currency                                 |
+| `department`      | required | string   | Employee's department                                      |
+| `oncontract`      | optional | boolean  | Employee's is on contract status                           |
+| `sub_department`  | required | string   | Employee's sub department                                  |
 
 **Parameters example**
 
