@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "de7d7e5d-c087-400f-8d65-5616941b3681",
+		"name": "Clipboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "692181"
+	},
+	"item": [
+		{
+			"name": "Hello Gateway Microservice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Pablo Barrera\",\r\n    \"email\" : \"Pablo.barrera@clipboard\",\r\n    \"password\" : \"test123\",\r\n    \"phone\": \"8182740581\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/authentication/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"authentication",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"pablo.barrera@clipboard\",\r\n    \"password\" : \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/authentication/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello Clipboard Microservice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clipboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Anupam\",\r\n\"salary\": \"200000000\",\r\n\"currency\": \"INR\",\r\n\"department\": \"Engineering\",\r\n\"sub_department\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get summary statistics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/ss",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						"ss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get summary statistics on contract",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/oncontract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						"oncontract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get summary statistics by department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"department\": \"Engineering\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/by_department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						"by_department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get summary statistics by department and subdepartment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlBhYmxvIEJhcnJlcmEiLCJwaG9uZSI6IjgxODI3NDA1ODEiLCJpYXQiOjE2NjczNjY2NzksImV4cCI6MTY2NzQ1MzA3OX0.64BG5kDMcl_PuTEpKcA2f9_EXQcnjElRsVSerI67uMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"department\": \"Engineering\",\r\n\"sub_department\": \"Platform\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clipboard/employee/by_department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clipboard",
+						"employee",
+						"by_department"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

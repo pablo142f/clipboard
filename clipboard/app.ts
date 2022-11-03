@@ -8,6 +8,7 @@ import {
 
 /* Routes */
 const employeeRoute = require('./src/routes/employee');
+const ssRoute = require('./src/routes/ss');
 
 /* DB */
 const db = require("./src/models/index");
@@ -33,6 +34,7 @@ app.get('/', async (req: any, res, next) => {
 
 app.use(setUser);
 app.use('/employee', employeeRoute);
+app.use('/ss', ssRoute);
 
 app.listen(port, () => {
     console.log(`Clipboard Services ${port}.`);
